@@ -6,10 +6,10 @@ function _mainController($scope, $http) {
 
 	$http({
 			method: 'get',
-			url: '/db/db.json'
+			url: '/db/material.json'
 		}).then(function (response){
 			console.log(response)
-			$scope.data = response.data.menu	
+			$scope.data = response.data.lists	
 		}, function(error){
 			console.log("loi ooooo"+ error);
 		});
